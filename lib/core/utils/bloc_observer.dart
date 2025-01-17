@@ -1,6 +1,7 @@
 import 'package:appwritecrud/core/utils/utilities.dart';
 import 'package:bloc/bloc.dart';
 
+/// A custom [BlocObserver] that logs various Bloc events for debugging purposes.
 class AppBlocObserver extends BlocObserver {
   @override
   void onCreate(BlocBase bloc) {

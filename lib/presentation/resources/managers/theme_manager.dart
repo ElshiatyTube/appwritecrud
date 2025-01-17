@@ -44,20 +44,14 @@ ThemeData getApplicationTheme() {
     // Elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-      // textStyle: regularStyle(
-      //   color: ColorManager.black,
-      //   fontSize: FontSizeManager.s16,
-      //   fontFamily: FontManager.textFontFamily
-      // ),
       disabledBackgroundColor: Colors.transparent,
       disabledForegroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
       elevation: AppSize.s0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: ColorManager.primary,
       //primary is deprecated
       shape: const StadiumBorder(),
     )),
-    // Text theme
     textTheme: TextTheme(
       /// Titles [TextStyle]
       displayLarge: regularStyle(
@@ -108,95 +102,16 @@ ThemeData getApplicationTheme() {
       ),
     ),
 
-    // input decoration theme (text form field)
-
-    inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: Colors.transparent,
-      contentPadding: const EdgeInsets.only(
-          left: AppPadding.p20,
-          right: AppPadding.p20,
-          top: AppPadding.p10,
-          bottom: AppPadding.p10),
-      // hint style
-      hintStyle: regularStyle(
-        color: ColorManager.grey,
+    listTileTheme: ListTileThemeData(
+      tileColor: ColorManager.white,
+      titleTextStyle: semiBoldStyle(
+        color: ColorManager.black,
         fontSize: FontSizeManager.s16.sp,
       ),
-
-      // label style
-      labelStyle: mediumStyle(
-        color: ColorManager.wireFrameMainColor,
-        fontSize: FontSizeManager.s16.sp,
-      ),
-      // error style
-      errorStyle: regularStyle(
-        color: ColorManager.wireFrameMainColor,
-        fontSize: FontSizeManager.s12.sp,
-      ),
-      disabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorManager.black,
-          width: AppSize.s1,
-        ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(
-            AppSize.s16,
-          ),
-        ),
-      ),
-      // enabled border
-      enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorManager.black,
-          width: AppSize.s0_5,
-        ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(
-            AppSize.s12,
-          ),
-        ),
-      ),
-
-      // focused border
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorManager.black,
-          width: AppSize.s1_5,
-        ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(
-            AppSize.s12,
-          ),
-        ),
-      ),
-
-      // error border
-      errorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorManager.error,
-          width: AppSize.s0_5,
-        ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(
-            AppSize.s12,
-          ),
-        ),
-      ),
-      // focused error border
-      focusedErrorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorManager.error,
-          width: AppSize.s0_5,
-        ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(
-            AppSize.s12,
-          ),
-        ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8))
       ),
     ),
   );
 
-  //Input Decoration Theme
 }

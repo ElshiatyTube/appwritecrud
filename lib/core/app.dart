@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../presentation/resources/managers/theme_manager.dart';
 import '../presentation/resources/routes/routes_manager.dart';
 
-
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
